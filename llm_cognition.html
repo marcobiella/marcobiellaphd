@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Marco Biella Ph.D.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- image placement: text wrapped -->
+		<style>
+			img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Research</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="decision_making.html" class="title">Decision-making</a></li>
+						<li><a href="social_network.html" class="title">Social Networks</a></li>
+						<li><a href="research_methods.html" class="title">Research Methods</a></li>
+						<!--<li><a href="generic.html" class="active">Generic</a></li>-->
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">LLM Cognition</h1>
+							<h2>Why Human Cognition and LLMs are so similar?</h2>
+							<p><strong>Large Language Models</strong> (LLMs) are not <a href="https://doi.org/10.1177/0149206314547522" target="_blank" rel="noopener"><strong>surrogates</strong></a> of the human mind.
+							 They are <strong>biologically inspired systems</strong> attempting to mimic a single function of the human mind, language. Even <strong>reasoning</strong> models do not possess most of the cognitive function necessary to <strong>think</strong>. 
+							 Yet, they replicate <strong>human behavior</strong> (in language) so well that they can serve us in understanding how <strong>some</strong> cognitive functions operates. 
+							 With this project, I leverage <strong>LLMs</strong> to explore the <strong>cognitvie space</strong> and to understand why it is structured the way it is.
+							</p>
+							<h2>The Density Hypothesis</h2>
+							<p>My investigation is pointed toward the <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2F0022-3514.95.1.36" target="_blank" rel="noopener"><strong>Density Hypothesis</strong></a>. This is a simple yet powerful statement about how concepts are arranged in our <strong>mind</strong>.
+							 The Density Hypothesis simply states that <strong>positive concepts</strong> are <strong>more similar</strong> to each others, they are more densely clustered within the <strong>cognitive space</strong>. Therefore, <strong>negative concepts</strong> are <strong>more different</strong> to each other, they are more spread out.
+							</p>
+							<p>
+								<img src="images/UnkelbachEtAl2008.png" alt="From Unkelbach et al. 2008" width="50%" height="50%">
+							</p>
+							<p>The picture above, from <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2F0022-3514.95.1.36" target="_blank" rel="noopener">Unkelbach et al. (2008)</a> depicts exactly that, and provides a rough idea of what the <strong>cognitive space</strong> is.
+							 The congitive space is a <strong>multidimensional space</strong> in which all the concepts we know are arranged. The meaning of each <strong>dimension</strong> is unknown, but our mind use them to locate each concept. According yo the Density Hypothesis, positive concepts are closer to each others while the negative ones are very spread out.
+							 That's why <i>"love"</i> and <i>"pretty"</i> are so <strong>close</strong> to each other, and why <i>"nasty"</i> and <i>"brutal"</i> are so <strong>far apart</strong>.
+							<br>
+							 If the Density Hypotheis hypotheis is true, <strong>discriminating</strong> among positive concepts should be more difficult and therefore, we might confuse one for another. This is <strong>exactly</strong> what we observe.
+							 Similarly, <strong>categorizing</strong> positive concepts should be easier and therefore, quicker. This is <strong>exactly</strong> what we observe. <br>
+							 There is <strong>considerable evidence</strong> suggesting that <strong> the Density Hypothesis is true</strong>. However, the Density Hypothesis was bounded to <strong>remain an hypothesis</strong> as we couldn't directly access the <strong>cognitive space</strong>, until <strong>LLMs</strong> came along.
+							</p>
+							<h2>Cognitive Space in LLMs</h2>
+							<p>LLMs have their own version of the <strong>cognitive space</strong>. Each concept, or <strong>token</strong> in LLM terms, is represented as a dot in a multidimensional space called <strong>embedding space</strong>.
+								Before LLMs, researchers created <strong>static embedding spaces</strong> in which they placed all words available in their traing corpora. This is why those embeddings are ofter referred to as <strong>word embeddings</strong>. A classical example of this is <a href="https://aclanthology.org/D14-1162.pdf" target="_blank" rel="noopener"><strong>GloVe</strong></a>, a model in which each word has its own <strong>GLObal VEctor</strong> containing its coordinates.
+								The beauty of these embeddings is that their <strong>topology</strong> allows to represents meanings and to jump from one word to another based on their meaning. Let's look at the <strong>analogy</strong> example in the 2D space below.
+							</p>
+							<p>
+								<img src="images/CognitiveSpace_Embeddings.png" alt="" width="50%" height="50%">
+							</p>
+							<p>
+								Intuitively, we know that a company owner's compensation is the profit generated by the company. With an <strong>analogy</strong>, we can say that an employees' compensation is their salary. The embedding space allow us to discover what is the employee's compensation starting from our knowledge that the owner's compensation is the company's profit. To do that, we just need some simple <strong>linear algebra</strong>. 
+								<br>
+								We know that <strong>the profit is for the owner what X is for the employee</strong>. So, if we start from <strong>V(profit)</strong>, the vector representing the position of <i>"profit"</i> in the embeddings, and subtract <strong>V(owner)</strong>, the vector for <i>"owner"</i>, we'll land on a point in the space from where we just need to add <strong>V(employee)</strong>, the vector for <i>"employee"</i>, to land exactly where our <strong>X</strong> is supposed to be. On X, we'll find ourselves on the vector for <i>"salary"</i>, <strong>V(salary)</strong>, which is for an employer what profit is for an owner.
+								In one simple step:
+
+								<p style="text-align:center;">V(profit) - V(owner) + V(employee) = V(salary)</p>
+
+								This is more than a simple fun fact! It means that the if the <strong>embedding space</strong> is the LLMs' <strong>homologous</strong> of our own mind's <strong>cognitive space</strong>, we can use <strong>LLMs</strong> to address some <strong>important research questions</strong> about human cognition and how we <strong>represent</strong> the world around us within our minds. All of a sudden, testing the <strong>Density Hypothesis</strong> is within reach!
+								<br>
+								This is why I already put together some <strong>preliminary findings</strong> which looks really really <strong>promising</strong>!
+							</p>
+							<h2>Preliminary Results</h2>
+							<p>These last few months, I collected a few <strong> wordlists</strong>, published along their normative data (at least, in terms of valence), and a bunch of publicly available <strong>embedding models</strong>.
+								The <strong>wordlists</strong> are <a href="https://psycnet.apa.org/buy/1992-33847-001" target="_blank" rel="noopener"><strong>Bargh et al. (1992)</strong></a>, 92 words historically used to investigate the Density Hypothesis, <a href="https://doi.org/10.1016/j.dib.2022.108831" target="_blank" rel="noopener"><strong>Raslescu et al. (2023)</strong></a>, 300 personality descriptors specifically selected as stimuli for personality research, and <a href="https://doi.org/10.3758/s13428-012-0314-x" target="_blank" rel="noopener"><strong>Warriner et al. (2013)</strong></a>, a collection of almost 14000 words from the English dictionary designed to be the most comprehensive wordlist for research in linguistics.
+								The <strong>embedding models</strong> are four flavor of <strong>GloVe</strong> by <a href="https://aclanthology.org/D14-1162.pdf" target="_blank" rel="noopener"><strong>Pennington et al. (2014)</strong></a>, which comes with embeddings of 50, 100, 200, 300 dimensions, the original <strong>BERT</strong> by <a href="https://doi.org/10.48550/arXiv.1810.04805" target="_blank" rel="noopener"><strong>Devlin et al. (2019)</strong></a>, the grandfather of all transformer-based LLMs, its distilled version <strong>DistilBERT</strong> by <a href="https://arxiv.org/abs/1910.01108" target="_blank" rel="noopener"><strong>Sanh et al (2019)</strong></a>, the grandfather of all transformer-based LLMs, another version of BERT which was substantially overtrained, <strong>RoBERTa</strong> by <a href="https://doi.org/10.48550/arXiv.1907.11692" target="_blank" rel="noopener"><strong>Liu et al. (2019)</strong></a>,
+								and the state of the art at the time of writing (spring 2025), Google's <strong>Gemini</strong> by <a href="https://arxiv.org/abs/2503.07891" target="_blank" rel="noopener"><strong>Lee et al. (2025)</strong></a>.
+								<br>
+								For each word in each wordlist, I simply extracted its embeddings from each of the embedding models. Then, I computed each word's <strong>density</strong> as the average <strong>cosine similarity</strong> between the word and each other in its valence cluster. From there, simple regressions tested the key idea behind the Density Hypothesis, words rated as <strong>more positive</strong> show <strong>higher density</strong> in terms of <strong>higher similarity</strong>.
+							 </p>
+							<p>
+								<img src="images/llm_density.png" alt="" width="100%" height="100%">
+							</p>
+							<p>These <strong>correlational results</strong> are <strong>striking</strong>! Valence predicts the word's density with slopes in the <strong>expected</strong> (positive) direction and <strong>reaching significance</strong>.
+								The only exception is the wordlist from <a href="https://doi.org/10.1016/j.dib.2022.108831" target="_blank" rel="noopener">Raslescu et al. (2023)</a> with the embeddings coming from all four <a href="https://aclanthology.org/D14-1162.pdf" target="_blank" rel="noopener">GloVe</a> versions. 
+								But there is a reason for that. <strong>Global embeddings</strong> are trained to <strong>overfit</strong> the training corpus as they are allegedly trained on all possible words. Therefore, they must show <strong>poor performance</strong> on <strong>unusual</strong> or <strong>niche</strong> words such as, for example, personality descriptors deliberatedly selected for a speficif purpose other than talking in plain language.
+								<br>
+								<strong>Contextual embeddings</strong>, such those from the other <strong>embedding models</strong>, or <strong>more common words</strong>, such as those <strong>historically</strong> used to investigate the Density Hypothesis and those coming from the most <strong>comprehensive</strong> wordlist available, perfectly produce the <strong>expected pattern</strong> predicted by the <strong>Density Hypothesis</strong>. 
+							 </p>
+							<h2>What's next?</h2>
+							<p>Now, as this approach doesn't allow for causal claims, the next steps is to introduce <strong>manipulated conditions</strong> for a proper <strong>causal</strong> investigation of the Density Hypothesis using LLMs. Specifically, I'll move to the <strong>generative component</strong> of LLMs by asking a few of them to write <strong>positive</strong> and <strong>negative</strong> descriptions of a smart-phone and a person.
+								This will generate data for a positive and a negative <strong>manipulated condition</strong> allowing me to test if <strong>LLMs reproduce the Density Hypothesis' prediction</strong> in their <strong>generative production</strong>. 
+								<br>
+								Finally, it will be time to test the <a href="https://doi.org/10.1080/10463283.2019.1688474" target="_blank" rel="noopener"><strong>Brunswikian</strong></a> explanation of the Density Hypothesis. Obviously, testing the <a href="http://dx.doi.org/10.1016/j.tics.2016.12.006" target="_blank" rel="noopener"><strong>evolutionary</strong></a> explanation of the Density Hypothesis doesn't make sense, as LLMs are not exposed to the same <strong>evolutionary pressure</strong> faced by our own <strong>cognitive space</strong>.
+								To do that, I'll create a <strong>positive</strong> and a <strong>negative</strong> training corpus to train <strong>embedding models</strong>. If the <a href="https://doi.org/10.1080/10463283.2019.1688474" target="_blank" rel="noopener"><strong>Brunswikian</strong></a> explanation is correct, the positive corpus will produce the typical <strong>density pattern</strong> while the negative one will produce the <strong>opposite one</strong> (with negative concepts more densely clustered than positive concepts).
+							</p>
+							<p>If you want to know more, you can join my <strong>symposium</strong> at the <a href="https://easp2026strasbourg.com/" target="_blank" rel="noopener"><strong>General Meeting</strong> of the <strong>European Association of Social Psychology</strong></a> in Strasbourg. Alternatively, you can find me in Cologne during the fall semester 2026 where, I'll visit the <a href="https://soccco.uni-koeln.de/" target="_blank" rel="noopener"><strong>Social Cognition Center Cologne</strong></a> as an <a href="https://c-seb.de/funding/grants/c-seb-international-fellowship-program/" target="_blank" rel="noopener"><strong>International Fellow</strong></a> thanks to a program funded by the <a href="https://c-seb.de/en/" target="_blank" rel="noopener"><strong>Center for Social and Economic Behavior</strong>.</a>
+							</p>
+							
+							<!-- original way to place an image
+						 	<span><img src="images/marcobiella.jpg" alt="" /></span>
+							-->
+							<h2 class="major">Related Publications</h2>
+							<p>Biella, M., &amp; Batzdorfer, V. (2026). Editorial: <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1763023/full" target="_blank" rel="noopener">The phenomenon of misinformation in different domains and by various disciplines</a>. <em>Frontiers in Psychology</em>.</p>
+							<p>Biella, M., &amp; Hütter, M. (2026). <a href="https://doi.org/10.1177/01461672241273237" target="_blank" rel="noopener">Navigating the Social Environment: A Sampling Approach to Trustworthiness</a>. <em>Personality and Social Psychology Bulletin</em>.</p>
+							<p>Biella, M., Gemignani, A., Conversano, C., Miniati, M., &amp; Orrù, G. (2025). <a href="https://doi.org/10.1525/collabra.136895" target="_blank" rel="noopener">Psychometric Assessment of the Italian Version of the Vaccination Attitudes Examination (VAX) Scale and Exploration of its Link with Policy Endorsement</a>. <em>Collabra: Psychology</em>.</p>
+							<p>Biella, M., Orrù, G., Ciacchini, R., Conversano, C., Marazziti, D., &amp; Gemignani A. (2023). <a href="https://doi.org/10.36131/cnfioritieditore20230404" target="_blank" rel="noopener">Anti-vaccination attitude and vaccination intentions against COVID-19: a retrospective cross-sectional study investigating the role of media consumption</a>. <em>Clinical Neuropsychiatry</em>.</p>
+							<p>Batzdorfer, V., Steinmetz, H., Biella, M., &amp; Alizadeh, M. (2021). <a href="https://pubmed.ncbi.nlm.nih.gov/34977334/" target="_blank" rel="noopener">Conspiracy theories on Twitter: emerging motifs and temporal dynamics during the COVID-19 pandemic</a>. <em>International Journal of Data Science and Analytics</em>.</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
